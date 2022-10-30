@@ -35,8 +35,16 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-// $routes->get('/', 'Home::index');
-$routes->get('/', 'Dashboard::index');
+$routes->get('/', 'Home::index');
+// $routes->get('/', 'Dashboard::index');
+
+$routes->group("user", function ($routes) {
+    $routes->get('home', 'UserController::index', ['as' => 'user.home']);
+    $routes->get('impor', 'UserController::impor', ['as' => 'user.impor']);
+    $routes->get('ekspor', 'UserController::ekspor', ['as' => 'user.ekspor']);
+    $routes->get('domestikmasuk', 'UserController::domestikmasuk', ['as' => 'user.domestikmasuk']);
+    $routes->get('domestikkeluar', 'UserController::domestikkeluar', ['as' => 'user.domestkkeluar']);
+});
 
 /*
  * --------------------------------------------------------------------

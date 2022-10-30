@@ -8,6 +8,10 @@ class Dashboard extends BaseController
     {
         // return view('welcome_message');
         // echo 'dashboard';
-        return view('dashboard/home');
+
+        $data = [
+            'title'      => 'Home',
+        ];
+        return view('dashboard/home', $data);
     }
 }
