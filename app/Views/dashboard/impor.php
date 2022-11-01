@@ -3,4 +3,8 @@
 
 import here
 
+<br>
+<?= current_url(); ?>
+<br>
+<?= base_url('user/impor'); ?>
 <?= $this->endSection(); ?>

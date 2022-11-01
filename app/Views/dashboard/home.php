@@ -3,4 +3,9 @@
 
 content here
 
+<br>
+<?= current_url(); ?>
+<br>
+<?= base_url('user/home'); ?>
+
 <?= $this->endSection(); ?>
